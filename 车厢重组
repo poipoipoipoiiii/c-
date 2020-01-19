@@ -1,0 +1,19 @@
+#include <iostream>
+int n,i,j,book;
+int a[10005];
+int main(){
+    using namespace std;
+    cin>>n;
+    for(i=1;i<=n;i++)
+        cin>>a[i];
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n-i;j++){
+            if(a[j]>a[j+1]){
+                book++;
+                swap(a[j+1], a[j]);
+            }
+        }
+    }
+    cout<<book<<endl;
+    return 0;
+}
