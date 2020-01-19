@@ -1,0 +1,17 @@
+#include <iostream>
+int n,i,j;
+bool a[105];
+int main(){
+    using namespace std;
+    cin>>n;
+    cout<<n<<endl;
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n;j++){
+            if(i!=j)
+                a[j]=1-a[j];
+            cout<<a[j];
+        }
+        cout<<endl;
+    }
+    return 0;
+}
